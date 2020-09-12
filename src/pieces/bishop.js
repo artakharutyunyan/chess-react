@@ -1,4 +1,5 @@
 import Piece from "./piece.js";
+import { isSameDiagonal, isPathClean } from "../helpers";
 
 export default class Bishop extends Piece {
   constructor(player) {
@@ -10,8 +11,11 @@ export default class Bishop extends Piece {
     );
   }
 
-  isMovePossible(src, dest) {
-    return Math.abs(src - dest) % 9 === 0 || Math.abs(src - dest) % 7 === 0;
+  isMovePossible(src, dest, squares) {
+    return (
+      isPathClean(this.getSrcToDestPath(src, dest), squares) &&
+      isSameDiagonal(src, dest)
+    );
   }
 
   /**

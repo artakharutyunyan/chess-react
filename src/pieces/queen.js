@@ -1,4 +1,10 @@
 import Piece from "./piece.js";
+import {
+  isSameRow,
+  isSameColumn,
+  isSameDiagonal,
+  isPathClean,
+} from "../helpers";
 
 export default class Queen extends Piece {
   constructor(player) {
@@ -10,15 +16,12 @@ export default class Queen extends Piece {
     );
   }
 
-  isMovePossible(src, dest) {
-    let mod = src % 8;
-    let diff = 8 - mod;
-
+  isMovePossible(src, dest, squares) {
     return (
-      Math.abs(src - dest) % 9 === 0 ||
-      Math.abs(src - dest) % 7 === 0 ||
-      Math.abs(src - dest) % 8 === 0 ||
-      (dest >= src - mod && dest < src + diff)
+      isPathClean(this.getSrcToDestPath(src, dest), squares) &&
+      (isSameDiagonal(src, dest) ||
+        isSameRow(src, dest) ||
+        isSameColumn(src, dest))
     );
   }
 

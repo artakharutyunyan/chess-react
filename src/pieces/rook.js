@@ -1,4 +1,10 @@
 import Piece from "./piece.js";
+import {
+  isSameRow,
+  isSameColumn,
+  isSameDiagonal,
+  isPathClean,
+} from "../helpers";
 
 export default class Rook extends Piece {
   constructor(player) {
@@ -10,11 +16,10 @@ export default class Rook extends Piece {
     );
   }
 
-  isMovePossible(src, dest) {
-    let mod = src % 8;
-    let diff = 8 - mod;
+  isMovePossible(src, dest, squares) {
     return (
-      Math.abs(src - dest) % 8 === 0 || (dest >= src - mod && dest < src + diff)
+      isPathClean(this.getSrcToDestPath(src, dest), squares) &&
+      (isSameColumn(src, dest) || isSameRow(src, dest))
     );
   }
 
