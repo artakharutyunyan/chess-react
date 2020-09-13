@@ -1,10 +1,10 @@
 import React from "react";
 
-import "../index.css";
+import "./game.styles.css";
 import Board from "./board.js";
-import King from "../pieces/king";
+import King from "../../pieces/king.js";
 import FallenPiecesBlock from "./fallenPiecesBlock";
-import initialiseChessBoard from "../helpers/cheesBoard.js";
+import initialiseChessBoard from "../../helpers/cheesBoard.js";
 
 export default class Game extends React.Component {
   constructor() {
@@ -144,7 +144,7 @@ export default class Game extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <div className="game">
           <div className="game-board">
             <Board

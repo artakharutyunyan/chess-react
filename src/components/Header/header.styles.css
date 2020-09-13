@@ -1,0 +1,36 @@
+body {
+  background: #ededed;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.play-button {
+  margin: 0;
+  padding: 10px 30px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  font-weight: 400;
+  text-align: center;
+  color: #9d9d9d;
+  text-decoration: none;
+}
+
+.play-button:focus {
+  text-decoration: none;
+  color: #9d9d9d;
+}
+
+.play-button:visited {
+  text-decoration: none;
+  color: #9d9d9d;
+}
+.play-button:hover {
+  text-decoration: none;
+  color: white;
+}

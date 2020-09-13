@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../index.css";
+import "./game.styles.css";
 import Square from "./square.js";
 
 export default class FallenPiecesBlock extends React.Component {
