@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+li {
+  padding: 5px 0px;
+  font-size: 18px;
+}

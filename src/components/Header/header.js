@@ -14,7 +14,12 @@ function Header() {
             </Link>
           </div>
           <div>
-            <Link to="/game" className="play-button">
+            <Link to="/champions" class="navbar-brand">
+              World Champions
+            </Link>
+          </div>
+          <div>
+            <Link to="/game" class="navbar-brand">
               Play
             </Link>
           </div>
