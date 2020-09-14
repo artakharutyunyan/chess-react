@@ -15,11 +15,16 @@ function ChampionsList() {
           match between the current champion and a challenger, though
           tournaments have been used on occasion for various reasons.
         </p>
-        <ul>
+        <div className="wrapper">
           {champions.map((champion) => (
-            <li key={champion.id}>{champion.info}</li>
+            <div className="date-and-img">
+              <div key={champion.id} className="header">
+                {champion.info}
+              </div>
+              <img src={champion.img} alt="" className="img" />
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
