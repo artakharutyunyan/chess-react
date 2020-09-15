@@ -5,21 +5,21 @@ import "./header.styles.css";
 
 function Header() {
   return (
-    <div class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
+    <div className="navbar navbar-inverse navbar-static-top">
+      <div className="container">
         <div className="header-wrapper">
           <div>
-            <Link to="/" class="navbar-brand">
+            <Link to="/" className="navbar-brand">
               Home
             </Link>
           </div>
           <div>
-            <Link to="/champions" class="navbar-brand">
+            <Link to="/champions" className="navbar-brand">
               World Champions
             </Link>
           </div>
           <div>
-            <Link to="/game" class="navbar-brand">
+            <Link to="/game" className="navbar-brand">
               Play
             </Link>
           </div>

@@ -38,7 +38,7 @@ export default class Game extends React.Component {
           backgroundColor: "RGB(111,143,114)",
         };
         this.setState({
-          status: "Choose destination for the selected piece",
+          status: "Move selected piece",
           sourceSelection: i,
         });
       }
@@ -81,8 +81,7 @@ export default class Game extends React.Component {
 
         if (isCheckMe) {
           this.setState((oldState) => ({
-            status:
-              "Wrong selection. Choose valid source and destination again. Now you have a check!",
+            status: "You have a check!",
             sourceSelection: -1,
           }));
         } else {
@@ -113,6 +112,18 @@ export default class Game extends React.Component {
       }
     }
   }
+
+  restartGame = () => {
+    this.setState({
+      squares: initialiseChessBoard(),
+      whiteFallenPieces: [],
+      blackFallenPieces: [],
+      player: 1,
+      sourceSelection: -1,
+      status: "",
+      turn: "white",
+    });
+  };
 
   getKingPosition(squares, player) {
     return squares.reduce(
@@ -148,7 +159,13 @@ export default class Game extends React.Component {
               squares={this.state.squares}
               onClick={(i) => this.handleClick(i)}
             />
+            <div className="restart-button">
+              <button className="restart" onClick={this.restartGame}>
+                Restart
+              </button>
+            </div>
           </div>
+
           <div className="game-info">
             <h3>Turn</h3>
             <div
