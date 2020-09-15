@@ -18,12 +18,6 @@ export default class Bishop extends Piece {
     );
   }
 
-  /**
-   * get path between src and dest (src and dest exclusive)
-   * @param  {num} src
-   * @param  {num} dest
-   * @return {[array]}
-   */
   getSrcToDestPath(src, dest) {
     let path = [],
       pathStart,

@@ -2,7 +2,7 @@ body {
   background: #ededed;
 }
 
-.wrapper {
+.header-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -19,7 +19,8 @@ function ChampionsList() {
           {champions.map((champion) => (
             <div className="date-and-img">
               <div key={champion.id} className="header">
-                {champion.info}
+                <div>{champion.name}</div>
+                <div>{champion.date}</div>
               </div>
               <img src={champion.img} alt="" className="img" />
             </div>

@@ -24,10 +24,6 @@ export default class Knight extends Piece {
     );
   }
 
-  /**
-   * always returns empty array because of jumping
-   * @return {[]}
-   */
   getSrcToDestPath() {
     return [];
   }

@@ -50,12 +50,6 @@ export default class Pawn extends Piece {
     return false;
   }
 
-  /**
-   * returns array of one if pawn moves two steps, else returns empty array
-   * @param  {[type]} src  [description]
-   * @param  {[type]} dest [description]
-   * @return {[type]}      [description]
-   */
   getSrcToDestPath(src, dest) {
     if (dest === src - 16) {
       return [src - 8];

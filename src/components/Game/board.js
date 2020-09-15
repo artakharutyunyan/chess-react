@@ -33,7 +33,6 @@ export default class Board extends React.Component {
         </div>
       );
     }
-
     return <div>{board}</div>;
   }
 }

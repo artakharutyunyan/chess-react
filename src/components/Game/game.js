@@ -36,7 +36,7 @@ export default class Game extends React.Component {
         squares[i].style = {
           ...squares[i].style,
           backgroundColor: "RGB(111,143,114)",
-        }; // Emerald from http://omgchess.blogspot.com/2015/09/chess-board-color-schemes.html
+        };
         this.setState({
           status: "Choose destination for the selected piece",
           sourceSelection: i,
@@ -117,11 +117,8 @@ export default class Game extends React.Component {
   getKingPosition(squares, player) {
     return squares.reduce(
       (acc, curr, i) =>
-        acc || //King may be only one, if we had found it, returned his position
-        (curr && //current squre mustn't be a null
-          curr.getPlayer() === player && //we are looking for aspecial king
-          curr instanceof King &&
-          i), // returned position if all conditions are completed
+        acc ||
+        (curr && curr.getPlayer() === player && curr instanceof King && i),
       null
     );
   }

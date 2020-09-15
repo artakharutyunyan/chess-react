@@ -7,7 +7,7 @@ function Header() {
   return (
     <div class="navbar navbar-inverse navbar-static-top">
       <div class="container">
-        <div className="wrapper">
+        <div className="header-wrapper">
           <div>
             <Link to="/" class="navbar-brand">
               Home

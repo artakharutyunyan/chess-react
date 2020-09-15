@@ -24,10 +24,6 @@ export default class King extends Piece {
     );
   }
 
-  /**
-   * always returns empty array because of one step
-   * @return {[]}
-   */
   getSrcToDestPath(src, dest) {
     return [];
   }
