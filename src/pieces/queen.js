@@ -16,7 +16,7 @@ export default class Queen extends Piece {
     );
   }
 
-  isMovePossible(src, dest, squares) {
+  isPossibleMove(src, dest, squares) {
     return (
       isPathClean(this.getSrcToDestPath(src, dest), squares) &&
       (isSameDiagonal(src, dest) ||

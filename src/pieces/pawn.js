@@ -15,7 +15,7 @@ export default class Pawn extends Piece {
     };
   }
 
-  isMovePossible(src, dest, isDestEnemyOccupied) {
+  isPossibleMove(src, dest, isDestEnemyOccupied) {
     if (this.player === 1) {
       if (
         (dest === src - 8 && !isDestEnemyOccupied) ||

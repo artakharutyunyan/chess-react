@@ -58,13 +58,13 @@ export default class Game extends React.Component {
       const whiteFallenPieces = [];
       const blackFallenPieces = [];
       const isDestEnemyOccupied = Boolean(squares[i]);
-      const isMovePossible = squares[this.state.sourceSelection].isMovePossible(
+      const isPossibleMove = squares[this.state.sourceSelection].isPossibleMove(
         this.state.sourceSelection,
         i,
         isDestEnemyOccupied
       );
 
-      if (isMovePossible) {
+      if (isPossibleMove) {
         if (squares[i] !== null) {
           if (squares[i].player === 1) {
             whiteFallenPieces.push(squares[i]);
@@ -76,9 +76,9 @@ export default class Game extends React.Component {
         squares[i] = squares[this.state.sourceSelection];
         squares[this.state.sourceSelection] = null;
 
-        const isCheckMe = this.isCheckForPlayer(squares, this.state.player);
+        const isCheck = this.isCheckPlayer(squares, this.state.player);
 
-        if (isCheckMe) {
+        if (isCheck) {
           this.setState((oldState) => ({
             status: "You have a check!",
             sourceSelection: -1,
@@ -133,11 +133,11 @@ export default class Game extends React.Component {
     );
   }
 
-  isCheckForPlayer(squares, player) {
+  isCheckPlayer(squares, player) {
     const opponent = player === 1 ? 2 : 1;
     const playersKingPosition = this.getKingPosition(squares, player);
     const canPieceKillPlayersKing = (piece, i) =>
-      piece.isMovePossible(playersKingPosition, i, squares);
+      piece.isPossibleMove(playersKingPosition, i, squares);
     return squares.reduce(
       (acc, curr, idx) =>
         acc ||

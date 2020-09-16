@@ -11,7 +11,7 @@ export default class Knight extends Piece {
     );
   }
 
-  isMovePossible(src, dest) {
+  isPossibleMove(src, dest) {
     return (
       (src - 17 === dest && !isSameRow(src, dest)) ||
       (src - 10 === dest && !isSameRow(src, dest)) ||

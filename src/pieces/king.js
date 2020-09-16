@@ -11,7 +11,7 @@ export default class King extends Piece {
     );
   }
 
-  isMovePossible(src, dest) {
+  isPossibleMove(src, dest) {
     return (
       (src - 9 === dest && isSameDiagonal(src, dest)) ||
       src - 8 === dest ||

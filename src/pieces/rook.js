@@ -16,7 +16,7 @@ export default class Rook extends Piece {
     );
   }
 
-  isMovePossible(src, dest, squares) {
+  isPossibleMove(src, dest, squares) {
     return (
       isPathClean(this.getSrcToDestPath(src, dest), squares) &&
       (isSameColumn(src, dest) || isSameRow(src, dest))
