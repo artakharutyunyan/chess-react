@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./championsList.styles.css";
-import champions from "./championsList.config";
+import champions from "./config";
 
 function ChampionsList() {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Header from "./components/Header/header.js";
-import Game from "./components/Game/game.js";
-import Home from "./components/HomePage/homePage.js";
-import ChampionsList from "./components/ChampionsListPage/championsList.js";
-import PageNotFound from "./components/PageNotFound/pageNotFound";
+import Header from "./components/Header/Header";
+import Game from "./components/Game/Game";
+import Home from "./components/HomePage/HomePage";
+import ChampionsList from "./components/ChampionsListPage/ChampionsList";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 function App() {
   return (

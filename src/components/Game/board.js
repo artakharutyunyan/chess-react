@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./game.styles.css";
-import Square from "./square.js";
+import Square from "./Square.js";
 
 export default class Board extends React.Component {
   renderSquare(i, squareShade) {

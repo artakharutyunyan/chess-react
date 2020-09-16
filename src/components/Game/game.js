@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./game.styles.css";
-import Board from "./board.js";
+import Board from "./Board.js";
 import King from "../../pieces/king.js";
-import FallenPiecesBlock from "./fallenPiecesBlock";
+import FallenPieces from "./FallenPieces";
 import initialiseChessBoard from "../../helpers/cheesBoard.js";
 
 export default class Game extends React.Component {
@@ -26,8 +26,7 @@ export default class Game extends React.Component {
     if (this.state.sourceSelection === -1) {
       if (!squares[i] || squares[i].player !== this.state.player) {
         this.setState({
-          status:
-            "Wrong selection. Choose player " + this.state.player + " pieces.",
+          status: this.state.player + " player move.",
         });
         if (squares[i]) {
           squares[i].style = { ...squares[i].style, backgroundColor: "" };
@@ -52,7 +51,7 @@ export default class Game extends React.Component {
 
     if (squares[i] && squares[i].player === this.state.player) {
       this.setState({
-        status: "Wrong selection. Choose valid source and destination again.",
+        status: "Wrong selection.",
         sourceSelection: -1,
       });
     } else {
@@ -106,7 +105,7 @@ export default class Game extends React.Component {
         }
       } else {
         this.setState({
-          status: "Wrong selection. Choose valid source and destination again.",
+          status: "Wrong selection.",
           sourceSelection: -1,
         });
       }
@@ -176,7 +175,7 @@ export default class Game extends React.Component {
 
             <div className="fallen-soldier-block">
               {
-                <FallenPiecesBlock
+                <FallenPieces
                   whiteFallenPieces={this.state.whiteFallenPieces}
                   blackFallenPieces={this.state.blackFallenPieces}
                 />
