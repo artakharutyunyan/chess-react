@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 import "./game.styles.css";
 import Board from "./Board.js";
@@ -112,7 +113,8 @@ export default class Game extends React.Component {
     }
   }
 
-  restartGame = () => {
+  handleRestartGame = () => {
+    toast.dark("Game restarted !");
     this.setState({
       squares: initialiseChessBoard(),
       whiteFallenPieces: [],
@@ -158,8 +160,11 @@ export default class Game extends React.Component {
               squares={this.state.squares}
               onClick={(i) => this.handleClick(i)}
             />
-            <div className="restart-button">
-              <button className="restart" onClick={this.restartGame}>
+            <div className="restart">
+              <button
+                className="restart-button"
+                onClick={this.handleRestartGame}
+              >
                 Restart
               </button>
             </div>

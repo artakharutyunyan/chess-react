@@ -6,6 +6,8 @@ import Game from "./components/Game/Game";
 import Home from "./components/HomePage/HomePage";
 import ChampionsList from "./components/ChampionsListPage/ChampionsList";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Route path="/game" component={Game} />
         <Route component={PageNotFound} />
       </Switch>
+      <ToastContainer autoClose={2000} hideProgressBar />
     </>
   );
 }
