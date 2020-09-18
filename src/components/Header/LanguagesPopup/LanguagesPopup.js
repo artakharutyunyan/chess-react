@@ -7,14 +7,13 @@ import { i18n } from "../../../i18n/index.js";
 import { useOnClickOutside } from "../../../helpers/hooks/useOnClickOutside";
 
 const LanguagesPopup = () => {
-  const containerRef = useRef(null);
   const switchLanguage = (lang) => {
     Cookies.set("lng", lang);
     i18n.changeLanguage(lang);
   };
 
   return (
-    <div className="languages" ref={containerRef}>
+    <div className="languages">
       {languages.map(
         (item) =>
           i18n.language !== item.id && (

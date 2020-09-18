@@ -4,13 +4,13 @@
   flex-direction: column;
   width: 120px;
   max-height: 300px;
-  background: #ffffff;
+  background: black;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 5px;
   right: 30px;
   top: 50px;
-  border: 1px solid #eeeeee;
+  border: 1px solid black;
 }
 
 @media (min-width: 1280px) {
@@ -20,15 +20,15 @@
     border-top: 1px solid #212121;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.02);
     bottom: unset;
-    right: 70;
-    top: 50px;
+    right: 70px;
+    top: 49px;
   }
 }
 
 .languageContainer {
   display: flex;
   flex-direction: row;
-  background: #ffffff;
+  background: black;
   align-items: center;
   justify-content: space-around;
   margin: 5px 0px;
@@ -52,7 +52,11 @@
 .text {
   font-weight: normal;
   font-size: 14px;
-  color: #242e46;
+  color: #9d9d9d;
   width: 60px;
   text-align: left;
+}
+
+.text:hover {
+  color: #fff;
 }

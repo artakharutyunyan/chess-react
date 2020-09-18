@@ -1,9 +1,9 @@
 export const am = {
   translation: {
     header: {
-      home: "",
-      worldChampions: "",
-      play: "",
+      home: "Գլխավոր",
+      worldChampions: "Աշխարհի չեմպիոններ",
+      play: "Խաղալ",
     },
   },
 };

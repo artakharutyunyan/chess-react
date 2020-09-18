@@ -8,3 +8,22 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+.language-logo {
+  width: 28px;
+  height: 28px;
+}
+
+.language-switch-button {
+  display: none;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (min-width: 1280px) {
+  .language-switch-button {
+    display: flex;
+  }
+}
