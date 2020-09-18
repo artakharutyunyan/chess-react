@@ -1,0 +1,37 @@
+import React, { useRef } from "react";
+import Cookies from "js-cookie";
+
+import "./languagesPopup.styles.css";
+import { languages } from "./config";
+import { i18n } from "../../../i18n/index.js";
+import { useOnClickOutside } from "../../../helpers/hooks/useOnClickOutside";
+
+const LanguagesPopup = () => {
+  const containerRef = useRef(null);
+  const switchLanguage = (lang) => {
+    Cookies.set("lng", lang);
+    i18n.changeLanguage(lang);
+  };
+
+  return (
+    <div className="languages" ref={containerRef}>
+      {languages.map(
+        (item) =>
+          i18n.language !== item.id && (
+            <div
+              className="languageContainer"
+              onClick={() => {
+                switchLanguage(item.id);
+              }}
+              key={item.id}
+            >
+              <img src={item.flag} alt="" className="flag" />
+              <div className="text">{item.text}</div>
+            </div>
+          )
+      )}
+    </div>
+  );
+};
+
+export default LanguagesPopup;

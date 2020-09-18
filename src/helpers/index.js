@@ -1,7 +1,7 @@
-const diagonalDictionaryTLBR = require("../dictionaries/diagonalTopLeftBottomRight.json");
-const diagonalDictionaryTRBL = require("../dictionaries/diagonalTopRightBottomLeft.json");
-const rowDictionary = require("../dictionaries/row.json");
-const columnDictionary = require("../dictionaries/column.json");
+const diagonalDictionaryTLBR = require("../common/diagonalTopLeftBottomRight.json");
+const diagonalDictionaryTRBL = require("../common/diagonalTopRightBottomLeft.json");
+const rowDictionary = require("../common/row.json");
+const columnDictionary = require("../common/column.json");
 
 const isSameRow = (src, dest) => {
   return !!(rowDictionary[src] && rowDictionary[src][dest]);
