@@ -33,6 +33,7 @@ export const am = {
       wrongSelection: "Սխալ ընտրություն",
       check: "Դուք ունեք շախ!",
       turn: "Քայլ",
+      restartGame: "Խաղը վերսկսված է !",
     },
   },
 };

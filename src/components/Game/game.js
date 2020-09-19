@@ -108,7 +108,7 @@ class Game extends React.Component {
         }
       } else {
         this.setState({
-          status: "Wrong selection.",
+          status: i18n.t("game.wrongSelection"),
           sourceSelection: -1,
         });
       }
@@ -116,7 +116,7 @@ class Game extends React.Component {
   }
 
   handleRestartGame = () => {
-    toast.dark("Game restarted !");
+    toast.dark(i18n.t("game.restartGame"));
     this.setState({
       squares: initialiseChessBoard(),
       whiteFallenPieces: [],

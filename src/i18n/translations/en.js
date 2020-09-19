@@ -33,6 +33,7 @@ export const en = {
       wrongSelection: "Wrong selection",
       check: "You have a check!",
       turn: "Turn",
+      restartGame: "Game restarted !",
     },
   },
 };

@@ -33,6 +33,7 @@ export const ru = {
       wrongSelection: "Неправильный выбор",
       check: "У вас есть шах!",
       turn: "Ход",
+      restartGame: "Игра перезапущена !",
     },
   },
 };
