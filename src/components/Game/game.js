@@ -1,13 +1,15 @@
 import React from "react";
 import { toast } from "react-toastify";
 
+import { i18n } from "../../i18n/index";
+import { withTranslation } from "react-i18next";
 import "./game.styles.css";
 import Board from "./Board.js";
 import King from "../../pieces/king.js";
 import FallenPieces from "./FallenPieces";
 import initialiseChessBoard from "../../helpers/cheesBoard.js";
 
-export default class Game extends React.Component {
+class Game extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -27,7 +29,7 @@ export default class Game extends React.Component {
     if (this.state.sourceSelection === -1) {
       if (!squares[i] || squares[i].player !== this.state.player) {
         this.setState({
-          status: this.state.player + " player move.",
+          status: this.state.player + " " + i18n.t("game.playerMove"),
         });
         if (squares[i]) {
           squares[i].style = { ...squares[i].style, backgroundColor: "" };
@@ -38,7 +40,7 @@ export default class Game extends React.Component {
           backgroundColor: "RGB(111,143,114)",
         };
         this.setState({
-          status: "Move selected piece",
+          status: i18n.t("game.movePiece"),
           sourceSelection: i,
         });
       }
@@ -52,7 +54,7 @@ export default class Game extends React.Component {
 
     if (squares[i] && squares[i].player === this.state.player) {
       this.setState({
-        status: "Wrong selection.",
+        status: i18n.t("game.wrongSelection"),
         sourceSelection: -1,
       });
     } else {
@@ -81,7 +83,7 @@ export default class Game extends React.Component {
 
         if (isCheck) {
           this.setState((oldState) => ({
-            status: "You have a check!",
+            status: i18n.t("game.check"),
             sourceSelection: -1,
           }));
         } else {
@@ -165,13 +167,13 @@ export default class Game extends React.Component {
                 className="restart-button"
                 onClick={this.handleRestartGame}
               >
-                Restart
+                {i18n.t("game.restart")}
               </button>
             </div>
           </div>
 
           <div className="game-info">
-            <h3>Turn</h3>
+            <h3>{i18n.t("game.turn")}</h3>
             <div
               id="player-turn-box"
               style={{ backgroundColor: this.state.turn }}
@@ -192,3 +194,5 @@ export default class Game extends React.Component {
     );
   }
 }
+
+export default withTranslation()(Game);

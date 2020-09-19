@@ -79,6 +79,7 @@ h3 {
 }
 
 .restart-button {
+  width: 150px;
   background: black;
   color: #9d9d9d;
   padding: 5px 15px;

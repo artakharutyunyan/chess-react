@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import Cookies from "js-cookie";
 
 import "./languagesPopup.styles.css";
-import { languages } from "./config";
+import { languages } from "./constants";
 import { i18n } from "../../../i18n/index.js";
 import { useOnClickOutside } from "../../../helpers/hooks/useOnClickOutside";
 
