@@ -27,13 +27,8 @@ export const am = {
       carlsen: "Մագնուս Կարլսեն",
     },
     game: {
-      restart: "Սկսել նորից",
-      playerMove: "խաղացողի քայլ.",
-      movePiece: "Տեղափոխել ընտրված խաղաքարը",
-      wrongSelection: "Սխալ ընտրություն",
-      check: "Դուք ունեք շախ!",
-      turn: "Քայլ",
-      restartGame: "Խաղը վերսկսված է !",
+      white: "Սպիտակ",
+      black: "Սև",
     },
   },
 };

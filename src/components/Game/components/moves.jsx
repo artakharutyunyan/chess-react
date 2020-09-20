@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { groupMovesByColor } from "../modules/game/selectors";
+import { i18n } from "../../../i18n/index";
+import { withTranslation } from "react-i18next";
 import "../game.css";
 
 // display a table of moves, in move notation.
@@ -11,8 +13,8 @@ export const Moves = (props) => {
     <table className="table">
       <thead>
         <tr>
-          <th className={whiteTurn ? "active" : ""}>White</th>
-          <th className={!whiteTurn ? "active" : ""}>Black</th>
+          <th className={whiteTurn ? "active" : ""}>{i18n.t("game.white")}</th>
+          <th className={!whiteTurn ? "active" : ""}>{i18n.t("game.black")}</th>
         </tr>
       </thead>
       <tbody>
@@ -41,4 +43,4 @@ const selector = (state = initialState) => {
   };
 };
 
-export default connect(selector)(Moves);
+export default withTranslation()(connect(selector)(Moves));

@@ -27,13 +27,8 @@ export const en = {
       carlsen: "Magnus Carlsen",
     },
     game: {
-      restart: "Restart",
-      playerMove: "player move.",
-      movePiece: "Move selected piece",
-      wrongSelection: "Wrong selection",
-      check: "You have a check!",
-      turn: "Turn",
-      restartGame: "Game restarted !",
+      white: "White",
+      black: "Black",
     },
   },
 };

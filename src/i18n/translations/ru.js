@@ -27,13 +27,8 @@ export const ru = {
       carlsen: "Магнус Карлсен",
     },
     game: {
-      restart: "Начать сначала",
-      playerMove: "игрока ход.",
-      movePiece: "Переместить выбранную фигуру",
-      wrongSelection: "Неправильный выбор",
-      check: "У вас есть шах!",
-      turn: "Ход",
-      restartGame: "Игра перезапущена !",
+      white: "Белые",
+      black: "Черные",
     },
   },
 };
