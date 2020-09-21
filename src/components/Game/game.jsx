@@ -6,7 +6,7 @@ import Store from "../../store";
 import Board from "./components/board";
 import TakenPieces from "./components/taken-pieces";
 import Moves from "./components/moves";
-import Restart from "./components/restartButton";
+// import Restart from "./components/restartButton";
 import { BLACK, WHITE } from "./chess/board";
 import { i18n } from "../../i18n/index";
 
@@ -20,7 +20,7 @@ export const Game = () => (
           <TakenPieces color={BLACK} />
         </div>
         <div className="col-md-2">
-          <Restart />
+          {/* <Restart /> */}
           <Moves />
         </div>
       </div>
