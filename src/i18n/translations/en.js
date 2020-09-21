@@ -29,6 +29,8 @@ export const en = {
     game: {
       white: "White",
       black: "Black",
+      gameStarted: "Game started!",
+      restart: "Restart",
     },
   },
 };

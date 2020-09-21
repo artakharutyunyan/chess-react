@@ -29,6 +29,8 @@ export const am = {
     game: {
       white: "Սպիտակ",
       black: "Սև",
+      gameStarted: "Խաղը սկսված է!",
+      restart: "Սկսել նորից",
     },
   },
 };

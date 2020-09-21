@@ -29,6 +29,8 @@ export const ru = {
     game: {
       white: "Белые",
       black: "Черные",
+      gameStarted: "Игра началась!",
+      restart: "Начать сначала",
     },
   },
 };
