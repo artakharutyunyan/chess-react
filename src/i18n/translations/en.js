@@ -7,8 +7,7 @@ export const en = {
     },
     championsList: {
       header: "Chess Immortals: The World Champions of Chess",
-      text:
-        "The classical line of World Chess Champions began with Wilhelm Steinitz's defeat of Johannes Zukertort in their 1886 match. Since that time, the World Championship has typically been contested in a match between the current champion and a challenger, though tournaments have been used on occasion for various reasons.",
+      text: "The classical line of World Chess Champions began with Wilhelm Steinitz's defeat of Johannes Zukertort in their 1886 match. Since that time, the World Championship has typically been contested in a match between the current champion and a challenger, though tournaments have been used on occasion for various reasons.",
       steinitz: "Wilhelm Steinitz",
       lasker: "Emanuel Lasker",
       capablanca: "Jose Raul Capablanca",
@@ -29,8 +28,7 @@ export const en = {
     game: {
       white: "White",
       black: "Black",
-      gameStarted: "Game started!",
-      restart: "Restart",
+      restart: "Restart Game",
     },
   },
 };

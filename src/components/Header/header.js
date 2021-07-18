@@ -19,17 +19,17 @@ function Header() {
     <div className="navbar navbar-inverse navbar-static-top">
       <div className="container">
         <div className="header-wrapper">
-          <div>
+          <div className="header-item">
             <Link to="/" className="navbar-brand">
               {i18n.t("header.home")}
             </Link>
           </div>
-          <div>
+          <div className="header-item">
             <Link to="/champions" className="navbar-brand">
               {i18n.t("header.worldChampions")}
             </Link>
           </div>
-          <div>
+          <div className="header-item">
             <Link to="/game" className="navbar-brand">
               {i18n.t("header.play")}
             </Link>
