@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
-import Game from "./components/Game/chess";
+import { Game } from "./components/Game/index";
 import Home from "./components/HomePage/HomePage";
 import ChampionsList from "./components/ChampionsListPage/ChampionsList";
 import PageNotFound from "./components/PageNotFound/PageNotFound";

@@ -1,4 +1,5 @@
 import React from "react";
+
 import { i18n } from "../../i18n/index";
 
 import "./game.styles.css";
@@ -14,6 +15,13 @@ import blackKnight from "../../images/black_knight.png";
 import blackPawn from "../../images/black_pawn.png";
 import blackQueen from "../../images/black_queen.png";
 import blackRock from "../../images/black_rook.png";
+import blackDefeat from "./sfx/Black_Defeat.mp3";
+import capture from "./sfx/Capture.mp3";
+import checkFlash from "./sfx/Check_Flash.mp3";
+import check from "./sfx/Check.mp3";
+import move from "./sfx/Move.mp3";
+import stalemate from "./sfx/Stalemate.mp3";
+import whiteDefeat from "./sfx/White_Defeat.mp3";
 
 // return a square with the chess piece
 function Square(props) {
@@ -1008,57 +1016,27 @@ class Board extends React.Component {
       <div>
         {this.state.move_made && !this.state.capture_made && (
           <div>
-            <audio
-              ref="audio_tag"
-              src="../sfx/Move.mp3"
-              controls
-              autoPlay
-              hidden
-            />{" "}
+            <audio ref="audio_tag" src={move} controls autoPlay hidden />{" "}
           </div>
         )}
         {this.state.capture_made && not_history && (
           <div>
-            <audio
-              ref="audio_tag"
-              src="../sfx/Capture.mp3"
-              controls
-              autoPlay
-              hidden
-            />{" "}
+            <audio ref="audio_tag" src={capture} controls autoPlay hidden />{" "}
           </div>
         )}
         {black_mated && not_history && (
           <div>
-            <audio
-              ref="audio_tag"
-              src="../sfx/Black_Defeat.mp3"
-              controls
-              autoPlay
-              hidden
-            />{" "}
+            <audio ref="audio_tag" src={blackDefeat} controls autoPlay hidden />{" "}
           </div>
         )}
         {white_mated && not_history && (
           <div>
-            <audio
-              ref="audio_tag"
-              src="../sfx/White_Defeat.mp3"
-              controls
-              autoPlay
-              hidden
-            />{" "}
+            <audio ref="audio_tag" src={whiteDefeat} controls autoPlay hidden />{" "}
           </div>
         )}
         {stale && not_history && (
           <div>
-            <audio
-              ref="audio_tag"
-              src="../sfx/Stalemate.mp3"
-              controls
-              autoPlay
-              hidden
-            />{" "}
+            <audio ref="audio_tag" src={stalemate} controls autoPlay hidden />{" "}
           </div>
         )}
         {this.state.check_flash &&
@@ -1068,7 +1046,7 @@ class Board extends React.Component {
               {" "}
               <audio
                 ref="audio_tag"
-                src="../sfx/Check_Flash.mp3"
+                src={checkFlash}
                 controls
                 autoPlay
                 hidden
@@ -1081,16 +1059,11 @@ class Board extends React.Component {
             <div className="side_box">
               <div className="wrapper">
                 <div className="player_box">
-                  <span className="medium_font">
-                    {" "}
-                    {i18n.t("game.white")}
-                  </span>
+                  <span className="medium_font"> {i18n.t("game.white")}</span>
                   {this.state.pieces_collected_by_white}
                 </div>
                 <div className="player_box black_player_color">
-                  <span className="medium_font">
-                    {i18n.t("game.black")}
-                  </span>
+                  <span className="medium_font">{i18n.t("game.black")}</span>
                   {this.state.pieces_collected_by_black}
                 </div>
               </div>
@@ -1299,7 +1272,7 @@ class Board extends React.Component {
   }
 }
 
-export default class Game extends React.Component {
+export class Game extends React.Component {
   render() {
     return <Board />;
   }
