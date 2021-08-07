@@ -29,6 +29,10 @@ export const en = {
       white: "White",
       black: "Black",
       restart: "Restart Game",
+      won: "You won by checkmate!",
+      lost: "You lost by checkmate.",
+      stalemate: "Stalemate. Game over.",
+      check: "Check!",
     },
   },
 };

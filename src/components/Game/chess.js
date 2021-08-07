@@ -1114,35 +1114,35 @@ class Board extends React.Component {
                 <p className="small_font">
                   {this.in_check("w", this.state.squares) &&
                   !this.checkmate("w", this.state.squares) === true
-                    ? "You are in check!"
+                    ? i18n.t("game.check")
                     : ""}
                 </p>
                 <p className="small_font">
                   {this.in_check("b", this.state.squares) &&
                   !this.checkmate("b", this.state.squares) === true
-                    ? "Black player is in check."
+                    ? i18n.t("game.check")
                     : ""}
                 </p>
                 <p className="small_font">
                   {this.checkmate("w", this.state.squares) === true
-                    ? "You lost by checkmate."
+                    ? i18n.t("game.lost")
                     : ""}
                 </p>
                 <p className="small_font">
                   {this.checkmate("b", this.state.squares) === true
-                    ? "You won by checkmate!"
+                    ? i18n.t("game.won")
                     : ""}
                 </p>
                 <p className="small_font">
                   {(this.stalemate("w", this.state.squares) &&
                     this.state.turn === "w") === true
-                    ? "You are in stalemate. Game over."
+                    ? i18n.t("game.stalemate")
                     : ""}
                 </p>
                 <p className="small_font">
                   {(this.stalemate("b", this.state.squares) &&
                     this.state.turn === "b") === true
-                    ? "Black is in stalemate. Game over."
+                    ? i18n.t("game.stalemate")
                     : ""}
                 </p>
               </div>
