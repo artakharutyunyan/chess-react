@@ -8,8 +8,8 @@
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 5px;
-  right: 30px;
-  top: 50px;
+  right: 0px;
+  top: 70px;
   border: 1px solid black;
 }
 
@@ -20,8 +20,8 @@
     border-top: 1px solid #212121;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.02);
     bottom: unset;
-    right: 70px;
-    top: 49px;
+    right: 55px;
+    top: 70px;
   }
 }
 

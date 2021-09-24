@@ -179,7 +179,7 @@ a:active {
   background-color: #ffffff;
   color: #242424;
   border-radius: 3px;
-  box-shadow: 1px 1px 3px #232621;
+  border: 1px solid #232621;
   position: relative;
   top: calc(50% - 41vmin);
   left: 13%;
